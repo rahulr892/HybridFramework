@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Suite" verbose="2" parallel="classes" thread-count="3"
+       configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="com.rahul.browserSetup.WebDriverListener"/>
+    </listeners>
+
+    <test name="Tests 1" enabled="true">
+        <parameter name="OS_Browser" value="Win7_Chrome"/>
+        <parameter name="URL" value="https://www.google.com/gmail/about/#"/>
+        <classes>
+            <class name="com.rahul.tests.login.Login"/>
+            <class name="com.rahul.tests.login.ValidateTitle"/>
+        </classes>
+    </test>
+
+</suite>
+
